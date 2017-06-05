@@ -176,7 +176,7 @@ return [
         // estoque\Providers\BroadcastServiceProvider::class,
         estoque\Providers\EventServiceProvider::class,
         estoque\Providers\RouteServiceProvider::class,
-
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', // Laravel IDE helper
     ],
 
     /*
