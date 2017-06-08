@@ -30,6 +30,6 @@ class ProdutoController extends Controller {
         $valor = Request::input('valor');
         $quantidade = Request::input('quantidade');
         DB::insert('insert into produtos (nome, quantidade, valor, descricao) values (?,?,?,?)', array($nome, $quantidade, $valor, $descricao));
-        return view('produto.adicionado')->with('nome', $nome);
+        return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
 }
