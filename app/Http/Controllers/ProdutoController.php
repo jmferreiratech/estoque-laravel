@@ -38,4 +38,17 @@ class ProdutoController extends Controller {
         return redirect()
             ->action('ProdutoController@lista');
     }
+
+    public function edita($id) {
+        return view('produto.edicao')
+            ->with('p', Produto::find($id));
+    }
+
+    public function salva() {
+        Produto::find(Request::get('id'))
+            ->fill(Request::all())
+            ->save();
+        return redirect()
+            ->action('ProdutoController@lista');
+    }
 }

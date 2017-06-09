@@ -9,3 +9,5 @@ Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0
 Route::get('/produtos/novo', 'ProdutoController@novo');
 Route::post('/produtos/novo', 'ProdutoController@adiciona');
 Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
+Route::get('/produtos/edita/{id}', 'ProdutoController@edita');
+Route::post('/produtos/edita', 'ProdutoController@salva');
