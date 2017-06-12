@@ -11,3 +11,7 @@ Route::post('/produtos/novo', 'ProdutoController@adiciona');
 Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
 Route::get('/produtos/edita/{id}', 'ProdutoController@edita');
 Route::post('/produtos/edita', 'ProdutoController@salva');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
